@@ -6,6 +6,7 @@ Ammo, M     : 216022002
 Booysen, M  : 216062241
 Kruger, W   : 216009529
 */
+import static java.lang.Math.pow;
 import java.util.Stack;
 
 public class Functions {
@@ -52,6 +53,10 @@ public class Functions {
                     case '*': 
                     stack.push(numberTwo*numberOne); 
                     break; 
+                    
+                    case '^':
+                        int powerOf = (int) Math.pow(numberTwo, numberOne);
+                        stack.push(powerOf);
               } 
             } 
         } 
