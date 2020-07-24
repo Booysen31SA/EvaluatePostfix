@@ -30,7 +30,7 @@ public class EvaluatePostfix {
  
     }
     
-    // Evaluate value of a postfix expression 
+    // Evaluate (calculate) value of a postfix expression 
     private static int evaluatePostfixExpression(String expression) 
     { 
         // Creating the stack to hold values
@@ -43,7 +43,8 @@ public class EvaluatePostfix {
             if(expression.charAt(i) == ' ' || expression.charAt(i) == '&' || expression.charAt(i) == '(' || expression.charAt(i) == ')') continue;
             
             if(expression.charAt(i) == '!' || expression.charAt(i) == '#' || expression.charAt(i) == '$' || expression.charAt(i) == '%') continue;
-            //puts the character thats being looked at in the char variable
+            
+            //puts the character thats being looked at in the char variable to be converted to integer
             char character = expression.charAt(i); 
               
             // If the character is an operand eg: number: 0 - 9, 
@@ -51,7 +52,7 @@ public class EvaluatePostfix {
             if(isOperand(character)) 
                stack.push(charToInt(character)); 
               
-            //  If the scanned character is an operator eg: +, -, *, / pop two to do calculation
+            //  If the scanned character is an operator eg: +, -, *, /, ^ pop two to do calculation
             // elements from stack apply the operator 
             else
             { 
@@ -92,6 +93,7 @@ public class EvaluatePostfix {
         return false;
     }
      
+     //converts character to integer and returns the int value
      private static int charToInt(Character character){
          return Integer.parseInt(String.valueOf(character));
      }
