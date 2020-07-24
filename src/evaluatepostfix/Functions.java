@@ -21,7 +21,9 @@ public class Functions {
         for(int i = 0; i < expression.length(); i++) 
         { 
             //checks if character is a space
-            if(expression.charAt(i) == ' ') continue;
+            if(expression.charAt(i) == ' ' || expression.charAt(i) == '&' || expression.charAt(i) == '(' || expression.charAt(i) == ')') continue;
+            
+            if(expression.charAt(i) == '!' || expression.charAt(i) == '#' || expression.charAt(i) == '$' || expression.charAt(i) == '%') continue;
             //puts the character thats being looked at in the char variable
             char character = expression.charAt(i); 
               
