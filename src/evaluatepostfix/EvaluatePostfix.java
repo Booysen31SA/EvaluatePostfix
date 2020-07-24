@@ -10,10 +10,10 @@ public class EvaluatePostfix {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        String expression = "12+34+*"; 
+        String expression = "2 2 * 2 / 3 4 + 3 2 ^ * + 6 - 1 +"; 
         
          EvaluatePostfix post = new EvaluatePostfix();
-         post.evaulate(expression);
+         post.evaulate(expression.replace(" ", ""));
     }
     
     //add function to call the function from another class but also for try - catch
