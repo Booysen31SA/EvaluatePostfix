@@ -13,7 +13,7 @@ public class EvaluatePostfix {
         String expression = "2 2 * 2 / 3 4 + 3 2 ^ * + 6 - 1 +"; 
         
          EvaluatePostfix post = new EvaluatePostfix();
-         post.evaulate(expression.replace(" ", ""));
+         post.evaulate(expression);
     }
     
     //add function to call the function from another class but also for try - catch

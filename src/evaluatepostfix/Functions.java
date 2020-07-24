@@ -20,13 +20,15 @@ public class Functions {
         // Scan the expression for characters
         for(int i = 0; i < expression.length(); i++) 
         { 
+            //checks if character is a space
+            if(expression.charAt(i) == ' ') continue;
             //puts the character thats being looked at in the char variable
             char character = expression.charAt(i); 
               
             // If the character is an operand eg: number: 0 - 9, 
             // push it to the stack. 
             if(isOperand(character)) 
-               stack.push(character - '0'); 
+               stack.push(charToInt(character)); 
               
             //  If the scanned character is an operator eg: +, -, *, / pop two to do calculation
             // elements from stack apply the operator 
@@ -68,4 +70,8 @@ public class Functions {
         if(character >= '0' && character <= '9') return true;
         return false;
     }
+     
+     private static int charToInt(Character character){
+         return Integer.parseInt(String.valueOf(character));
+     }
 }
