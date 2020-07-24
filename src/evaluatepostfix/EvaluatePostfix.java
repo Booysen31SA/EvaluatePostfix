@@ -22,7 +22,7 @@ public class EvaluatePostfix {
     //add function to call the function from another class but also for try - catch
     private void evaulate(String expression){
         try {
-        System.out.println("The expression giving is : " + expression);
+        System.out.println("The expression given is: : " + expression);
         System.out.println("The evaluated expression is : " + evaluatePostfixExpression(expression));
         } catch (Exception e) {
             System.out.println("Could not evaluate expression because of : " + e + "\nMight be because you enterd a wrong expression");
